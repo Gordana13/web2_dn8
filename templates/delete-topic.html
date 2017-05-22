@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block naslov %}Delete {{ topic.title }}{% endblock %}
+
+{% block vsebina %}
+<br>
+<div style="text-align: center;">
+    <h3> Are you sure that you want to delete {{ topic.title }}?</h3>
+
+    <form method="post" action="/topic/show/{{ topic.key.id() }}/delete">
+        <img width="35px" src="https://qph.ec.quoracdn.net/main-qimg-83c6de25ed91d13a4f09fb5f11ca8853">
+        <button type="submit" class="btn btn-danger btn-sm">Confirm</button>
+    </form>
+</div>
+{% endblock %}
